@@ -1,7 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Dvir',
+  title: 'Dvir Segev',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
@@ -9,12 +8,10 @@ const siteMetadata = {
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
 
   email: 'dvir@clarahealth.co',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
+  github: 'https://github.com/dvirsegev',
+  x: 'https://twitter.com/dvirsegev',
   // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/dvirsegev',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
