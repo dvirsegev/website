@@ -18,8 +18,11 @@ export default function ListLayoutLean({ posts, title }: ListLayoutLeanProps) {
           return (
             <li key={path} className="py-2">
               <div className="flex items-baseline gap-4">
-                <h2 className="text-lg font-medium tracking-tight pr-4">
-                  <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+                <h2 className="pr-4 text-lg font-medium tracking-tight">
+                  <Link
+                    href={`/${path}`}
+                    className="text-gray-900 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300"
+                  >
                     {title}
                   </Link>
                 </h2>
@@ -34,5 +37,3 @@ export default function ListLayoutLean({ posts, title }: ListLayoutLeanProps) {
     </div>
   )
 }
-
-

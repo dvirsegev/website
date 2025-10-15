@@ -12,8 +12,9 @@ export function generateStaticParams() {
   return allBlogs.map((p) => ({ slug: p.slug.split('/') }))
 }
 
-export default function Page({ params }: { params: { slug: string[] } }) {
-  const slug = Array.isArray(params.slug) ? params.slug.join('/') : params.slug
+export default async function Page({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug: slugParam } = await params
+  const slug = Array.isArray(slugParam) ? slugParam.join('/') : slugParam
   const post = allBlogs.find((p) => p.slug === slug) || null
   if (!post) return notFound()
 
@@ -30,11 +31,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
   return (
     <PostLayout content={post} authorDetails={authorDetails} next={next} prev={prev}>
-      {/* @ts-expect-error Server Component wrapper around client MDX renderer */}
       <MDXLayoutRenderer code={post.body.code} components={components} />
     </PostLayout>
   )
 }
-
-
-

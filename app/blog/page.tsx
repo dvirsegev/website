@@ -10,6 +10,3 @@ export default function Page() {
   const posts = allCoreContent(sorted)
   return <ListLayoutLean posts={posts} title="Blog" />
 }
-
-
-
