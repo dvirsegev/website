@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Dvir Segev',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://dvirsegev.com',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
 
