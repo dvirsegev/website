@@ -1,0 +1,79 @@
+---
+title: "What I'm Learning as a Healthcare CTO: Implementing AI Without Fantasy"
+date: "2025-08-11"
+tags: ["startup", "pivot", "YC", "VoiceAI", "healthcare", "founder-market-fit"]
+draft: false
+summary: "Notes from the CTO seat on shipping AI in healthcare: why the blank canvas kills projects, how teams overestimate models and underestimate plumbing, and the guardrails that make progress real."
+images: ["/static/images/twitter-card.png"]
+authors: ["default"]
+layout: PostLayout
+canonicalUrl: "https://dvirsegev.com/blog/startup-journey-voice-ai-healthcare"
+---
+
+I'm collecting the things I'm learning as the CTO of a healthcare startup. These are practical notes from implementing AI with real teams—what works, what quietly derails momentum, and what actually compounds. The moment is real: recent research from Bessemer, AWS, and Bain finds AI is now a top priority across healthcare, but only ~30% of pilots reach production due to security, data readiness, integrations, and limited in‑house expertise—while budgets and co‑development are rising. See the [Healthcare AI Adoption Index](https://www.bvp.com/atlas/the-healthcare-ai-adoption-index) for context.
+
+### Why So Many Healthcare Teams Stay in “Pilot Mode”
+
+BVP’s data points to four main blockers: security, in-house expertise, costly integrations, and AI-ready data.
+From what I’ve seen, those aren’t separate problems—they’re all symptoms of the same truth: AI is easy to use, but hard to build.
+
+Most teams approach AI like a tool you plug in, not a system you have to engineer. They can spin up a demo in days—but turning that demo into something reliable, compliant, and integrated takes months of unglamorous work. That’s where momentum stalls.
+
+Security issues show up when nobody owns the data flow.
+Integration pain comes from keeping AI detached from real workflows.
+“Lack of expertise” happens when teams expect generalists to run production AI without the right tools or processes.
+And “data readiness” problems? They’re what you get when the plumbing is missing and no feedback loops exist.
+
+It’s all connected. The gap isn’t about capability—it’s about craft. Building AI that works once is easy; building AI that teams can depend on is hard.
+
+I’m going to share here my two cents on what are the things that needs to notice in order to get AI agent from the POC level to production level.
+
+### Expectation vs Reality
+
+Ever met someone from a dating app who looked a little different in real life? That gap between expectation and reality is exactly what happens when teams implement AI.
+
+![AI Reality Check](https://media.giphy.com/media/8BksuCtGTDJdBJqzve/giphy.gif)
+
+The first step is setting the right expectations. Before diving into models and implementations, you need to understand what problem the user actually wants to solve with AI. Most teams skip that and jump straight into building. The real challenge, though, is that implementing AI workflows or agents isn’t a one-shot effort — it’s a process full of iteration, feedback, and human validation. You build, test, adjust, and repeat until it truly works in practice.
+
+### Shaping AI Requires Hands-On Humans  
+
+From what I’ve seen, teams that dedicate a full-time person (or small group) to define, monitor, and refine the AI’s responsibilities consistently get better results.  
+
+Why? Because AI is like plastic — it doesn’t come pre-shaped. To make it fit your workflows, you have to heat it, bend it, and mold it over time. That means getting your hands dirty: reviewing outputs, labeling mistakes, tightening prompts, and feeding back edge cases.  
+
+The teams that treat this as an ongoing craft, not a one-time setup, are the ones whose AI systems actually stick and scale.
+
+A durable feedback loop is non‑negotiable. Put a human in the loop to catch false positives, correct summaries, and flag risky actions. Treat every correction as a label to improve prompts, tools, and evaluation. Log inputs, outputs, confidence, and edits so you can replay decisions and measure whether quality is climbing. Without this, you’re flying blind and trust will stall.
+
+
+When these are clear, speed doubles. When they’re fuzzy, you stall in review.
+
+### Infrastructure Is Half the Product  
+
+Most AI projects don’t fail because the model is bad — they fail because the plumbing is. The queues, logs, retries, and integrations are what turn a demo into a dependable system.  
+
+From what I’ve been seeing, an AI agent doing the same task in two different companies can end up being 85% different. You can’t assume the same prompts or flow will just work everywhere. Every org has its own language, data quirks, and edge cases — and those differences matter.  
+
+The more context the AI has — real data, real systems, real feedback — the better it performs. Infrastructure is what gives it that context. It’s what connects the model to how work *actually* gets done, not how it looks in a demo.  
+
+The less friction your infra causes, the more the AI can learn and help.
+
+### Guardrails Are Features  
+
+“Mostly right” isn’t good enough in healthcare. You need guardrails built in, not bolted on. The AI has to know its limits, refuse risky moves, and let humans catch the outliers.  
+
+Keep the feedback loop tight — refine, test, and adjust until the system knows when to stop and when to ask for help.  
+
+Because here, margins for error don’t exist. Stay inside the guardrails.
+
+
+---
+
+Fixing this isn’t about buying another model. It’s about helping teams learn to build with AI the same way they build software — through iteration, monitoring, and ownership.  
+
+Sometimes that means training your own R&D teams to design and refine AI loops, not just consume APIs. Other times, it means bringing in people who can work side by side with your teams instead of throwing reports over the wall.  
+
+That’s exactly what we do at **Clara** with our **Forward Deployed Engineering (FDE)** model: embedding engineers directly with healthcare organizations to design workflows, integrate data, and shape the AI around how they actually operate. It’s the difference between delivering a tool *to* a team and building a system *with* them — and that’s how you move beyond the endless pilot phase.  
+
+Because in the end, building AI agents and workflows isn’t about chasing novelty; it’s about shipping systems that fit reality. When you get the problem right, shape the loop, build the guardrails, and connect it to real data — that’s when AI stops being a demo and starts driving impact.
